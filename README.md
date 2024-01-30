@@ -55,4 +55,4 @@ I got a good grasp of powers of DOM manipulation using javascript, it is a truly
 
 ### Try it out!
 
-Check it out [here](danishkodemonkey.github.io/javascript-shopping-list/)
+Check it out [here](https://danishkodemonkey.github.io/javascript-shopping-list/)
