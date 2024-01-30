@@ -36,12 +36,27 @@
       const shoppingList = document.querySelector("ul")
       const input = document.querySelector("#item")
       const btn = document.querySelector("button")
-      console.log(shoppingList)
-      console.log(input)
-      console.log(btn)
+
       function newItem() {
-        let item = document.getElementById("item").value
-        console.log(item)
+        let itemValue = document.getElementById("item").value
+        input.value = ""
+
+        const itemList = document.createElement("li")
+
+        const itemSpan = document.createElement("span")
+        itemSpan.textContent = itemValue
+        itemList.appendChild(itemSpan)
+
+        const itemButton = document.createElement("button")
+        itemButton.textContent = "Delete"
+        itemButton.addEventListener("click", function () {
+          input.focus()
+          itemList.remove()
+        })
+        itemList.appendChild(itemButton)
+
+        shoppingList.appendChild(itemList)
+        input.focus()
       }
       btn.addEventListener("click", newItem)
     </script>
